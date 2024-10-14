@@ -1,6 +1,5 @@
 @extends('/layouts/main-layout')
 @section('content')
-
 	<div class="container mx-auto container--slim section-margin">
 		@if ($errors->any())
 			<div class="panel section-margin">

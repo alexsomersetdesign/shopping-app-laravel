@@ -5,6 +5,7 @@
 		</div>
 		<div class="right">
 			<form method="post" class="product-add-form-" action="/product-add">
+				@csrf
 				<input type="hidden" name="product_id" value='{{ $product->id }}' />
 				<input type="hidden" name="user_id" value='{{ $user->id }}' />
 				<button class="btn--add" type="submit">Add</button>

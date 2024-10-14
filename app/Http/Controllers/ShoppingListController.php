@@ -18,10 +18,10 @@ class ShoppingListController extends BaseController
     	//Get all products
     	$allProducts = Product::get();
 
+    	//Get user products
+    	$userProducts = $user->products()->get();
 
-
-
-        return view('/shopping-list', compact('allProducts', 'user'));
+        return view('/shopping-list', compact('allProducts', 'user', 'userProducts'));
     }
 
     

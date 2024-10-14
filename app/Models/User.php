@@ -45,4 +45,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function products() {
+        return $this->belongsToMany('App\Models\Product', 'user_products');
+    }
 }

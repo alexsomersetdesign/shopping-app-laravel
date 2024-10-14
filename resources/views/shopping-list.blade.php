@@ -2,6 +2,11 @@
 @section('content')
 <section class="section-margin">
 	<div class="container mx-auto">
+		@if (session('message'))
+			<div class="panel panel--slim section-margin">
+			    <h3 class="header text-green-500 text-center header--small">{{ session('message') }}</h3>
+			</div>
+		@endif
 		<div class="panel">
 			<div class="grid grid-cols-12">
 				<div class="col-span-6">
