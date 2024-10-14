@@ -17,12 +17,14 @@ class RegisterController extends BaseController
 
     public function registerUser(Request $request) {
 
+        //Validation Rules
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
- 
+    
+        //Create new user
         User::create([
             'name' => $request->name,
             'email' => $request->email,
