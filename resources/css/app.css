@@ -1,0 +1,224 @@
+BODY {
+  font-family: "Poppins", sans-serif;
+}
+
+HEADER {
+  background-color: #022954;
+}
+HEADER .header__title {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+HEADER .btn--white {
+  font-size: 1.2rem;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #022954;
+}
+.header.header--small {
+  font-size: 1.5rem;
+}
+.header.header--extra-small {
+  font-size: 1.2rem;
+}
+
+.section-margin {
+  margin: 3rem 0rem;
+}
+
+.btn {
+  background-color: #022954;
+  border: 2px solid #022954;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 7px;
+  display: inline-block;
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+.btn:hover {
+  cursor: pointer;
+  background: white;
+  border: 2px solid #022954;
+  color: #022954;
+}
+.btn.hover-stroke:hover {
+  border: 2px solid #022954;
+}
+
+.btn--remove {
+  background-color: red;
+  border: 2px solid red;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 7px;
+  display: inline-block;
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+.btn--remove:hover {
+  cursor: pointer;
+  background: white;
+  border: 2px solid red;
+  color: red;
+}
+.btn--remove.hover-stroke:hover {
+  border: 2px solid red;
+}
+
+.btn--purchase, .btn--add {
+  background-color: #022954;
+  border: 2px solid #022954;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 7px;
+  display: inline-block;
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+.btn--purchase:hover, .btn--add:hover {
+  cursor: pointer;
+  background: white;
+  border: 2px solid #022954;
+  color: #022954;
+}
+.btn--purchase.hover-stroke:hover, .btn--add.hover-stroke:hover {
+  border: 2px solid #022954;
+}
+.btn--purchase.btn--purchased, .btn--purchase:disabled, .btn--add.btn--purchased, .btn--add:disabled {
+  background-color: green;
+  color: white;
+  border-color: green;
+}
+
+.btn--white {
+  background-color: white;
+  border: 2px solid white;
+  color: #022954;
+  padding: 5px 15px;
+  border-radius: 7px;
+  display: inline-block;
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+.btn--white:hover {
+  cursor: pointer;
+  background: #022954;
+  border: 2px solid white;
+  color: white;
+}
+.btn--white.hover-stroke:hover {
+  border: 2px solid white;
+}
+
+.container {
+  padding: 0rem 1rem;
+}
+.container.container--slim {
+  max-width: 850px;
+}
+
+.panel {
+  border: 2px solid #022954;
+  padding: 30px;
+  border-radius: 8px;
+}
+.panel.panel--slim {
+  padding: 10px 30px;
+}
+.panel .panel__row .panel__column .panel__item {
+  padding-bottom: 20px;
+  position: relative;
+}
+.panel .panel__row .panel__column .panel__item .left, .panel .panel__row .panel__column .panel__item .right {
+  display: inline-block;
+}
+.panel .panel__row .panel__column .panel__item .right {
+  float: right;
+  display: flex;
+}
+.panel .panel__row .panel__column .panel__item .right .btn--purchase {
+  margin-right: 0.5rem;
+}
+.panel .panel__row .panel__column .panel__item .right .btn--return {
+  background-color: red;
+  border-color: red;
+}
+.panel .panel__row .panel__column .panel__item .right .btn--return:hover {
+  color: white;
+}
+.panel .panel__row .panel__column .panel__item .left SPAN {
+  position: relative;
+  color: #022954;
+}
+.panel .panel__row .panel__column .panel__item .left SPAN:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  opacity: 0;
+  top: 50%;
+}
+.panel .panel__row .panel__column .panel__item .left SPAN.crossed-off:before {
+  opacity: 1;
+}
+
+FORM {
+  margin-bottom: 0rem;
+}
+FORM .form__input INPUT {
+  border: 2px solid #022954;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 100%;
+}
+FORM .form__input INPUT::placeholder {
+  color: #022954;
+  font-weight: 800;
+}
+FORM BUTTON.btn {
+  font-size: 1rem;
+  padding: 10px 15px;
+}
+
+.spending-limit FORM .form__input, .email FORM .form__input {
+  max-width: 300px;
+  display: inline-block;
+}
+.spending-limit FORM .form__input INPUT, .email FORM .form__input INPUT {
+  padding: 8px 20px;
+}
+.spending-limit FORM BUTTON, .email FORM BUTTON {
+  padding: 10px 20px;
+}
+.spending-limit .spending-limit__message, .email .spending-limit__message {
+  display: none;
+  color: red;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.spending-limit .spending-limit__message.display, .email .spending-limit__message.display {
+  display: block;
+}
+
+.email FORM .form__input {
+  min-width: 300px;
+}
+
+/*# sourceMappingURL=app.css.map */

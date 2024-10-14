@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Routing\Controller as BaseController;
+
+
+class RegisterController extends BaseController
+{
+    public function showRegistrationForm(){
+
+        return view('register');
+    }
+
+    public function registerUser(Request $request) {
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+        ]);
+ 
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect('/login')->with('message', 'Registration successful! Please log in.');
+    }
+}
