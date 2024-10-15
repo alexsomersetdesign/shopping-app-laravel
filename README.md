@@ -33,6 +33,7 @@ Incomplete Stories (not enough time left)
 <h3>How to setup</h3>
 
 - git clone https://github.com/alexsomersetdesign/shopping-app-laravel.git
+- cd shopping-app-laravel
 - composer install
 - npm install
 - cp .env.example .env
