@@ -1,4 +1,4 @@
-Prerequisites
+<h3>Prerequisites</h3>
 
 This application was created using Laravel and Vanilla Javascript
 
@@ -23,13 +23,14 @@ Completed Stories
 
 10 - Add a login system to persist shopping lists for different users (Registration and login system)
 
+
 Incomplete Stories (not enough time left)
 
 6 - Create a way for user to be able to change the order of items in their shopping list
 
 
 
-How to setup
+<h3>How to setup</h3>
 
 - git clone https://github.com/alexsomersetdesign/shopping-app-laravel.git
 - Create Localhost evironment
