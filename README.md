@@ -46,7 +46,7 @@ Please now add credentials to .env and then run the following commands
 
 Please now run the following
 
-- npm run dev
+- npm run build
 - php artisan serve
 
 
