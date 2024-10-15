@@ -42,6 +42,7 @@ Please now add credentials to .env and then run the following commands
 - php artisan key:generate
 - php artisan config:clear
 - php artisan migrate
+- php artisan db:seed
 
 Please now run the following
 
