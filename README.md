@@ -1,6 +1,6 @@
 <h3>Prerequisites</h3>
 
-This application was created using Laravel and Vanilla Javascript
+This application was created using Laravel 11 and Vanilla Javascript
 
 
 Completed Stories
