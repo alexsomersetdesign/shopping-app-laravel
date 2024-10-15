@@ -18,21 +18,25 @@ class ShoppingListController extends BaseController
     	//Get all products
     	$allProducts = Product::get();
 
-    	//Get user products
-    	$userProducts = $user->products()->get();
+        //Ensure user is set, if not return to login, error may occur if session expires
+        if($user) {
 
-        //Get shopping list total price
-        $list_total_price = $userProducts->sum('price');
+        	//Get user products
+        	$userProducts = $user->products()->get();
 
-        //Get user spending limit
-        if($list_total_price >= $user->spending_limit) {
-            $display_message = true;
+            //Get shopping list total price
+            $list_total_price = $userProducts->sum('price');
+
+            //Get user spending limit
+            if($list_total_price >= $user->spending_limit) {
+                $display_message = true;
+            } else {
+                $display_message = false;
+            }
+            return view('/shopping-list', compact('allProducts', 'user', 'userProducts', 'list_total_price', 'display_message'));
         } else {
-            $display_message = false;
+            return redirect('/login')->with('message', 'Please Login to use App');
         }
-
-
-        return view('/shopping-list', compact('allProducts', 'user', 'userProducts', 'list_total_price', 'display_message'));
     }
 
     public function setSpendingLimit(Request $request) {
