@@ -43,7 +43,7 @@ Please now add credentials to .env for database and mail and then run the follow
 - php artisan key:generate
 - php artisan config:clear
 - php artisan migrate
-- php artisan db:seed
+- php artisan db:seed --class=ProductsTableSeeder
 
 Please now run the following
 
