@@ -33,7 +33,24 @@ Incomplete Stories (not enough time left)
 <h3>How to setup</h3>
 
 - git clone https://github.com/alexsomersetdesign/shopping-app-laravel.git
-  
+- composer install
+- npm install
+- cp .env.example .env
+
+Please now add credentials to .env and then run the following commands
+
+- php artisan key:generate
+- php artisan config:clear
+- php artisan migrate
+
+Please now run the following
+
+- php artisan serve
+- npm run dev
+
+
+
+
 
 - Register a user and login
 
