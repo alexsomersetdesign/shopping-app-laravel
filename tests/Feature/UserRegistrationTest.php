@@ -8,6 +8,7 @@ use App\Models\User;
 
 class UserRegistrationTest extends TestCase {
 
+    /** @test */
     public function a_user_can_register_with_valid_data()
     {
         $data = [
