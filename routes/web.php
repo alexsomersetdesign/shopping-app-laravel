@@ -9,7 +9,7 @@ Route::get('/login', 'App\Http\Controllers\Auth\LoginController@showLoginForm');
 Route::post('/login', 'App\Http\Controllers\Auth\LoginController@loginUser');
 
 //Logout Route
-Route::get('/logout', 'App\Http\Controllers\LoginController@logoutUser');
+Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logoutUser');
 
 //Registrations Routes
 Route::get('/register', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm');

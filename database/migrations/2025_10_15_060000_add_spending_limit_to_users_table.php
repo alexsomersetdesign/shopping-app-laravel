@@ -14,7 +14,7 @@ class AddSpendingLimitToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->decimal('spending_limit', 8, 2);
+            $table->decimal('spending_limit', 8, 2)->nullable();
 
         });
     }
