@@ -16,14 +16,25 @@ class ProductController extends BaseController
     	$user_id = $request->user_id;
     	$product_id = $request->product_id;
 
-    	
     	$user = User::where('id', $user_id)->first();
-
 
     	$user->products()->attach($request->product_id);
 
 
         return redirect('/shopping-list')->with('message', 'Product Added to List');
+    }
+
+    public function removeProductFromList(Request $request){
+
+    	$user_id = $request->user_id;
+    	$product_id = $request->product_id;
+
+    	$user = User::where('id', $user_id)->first();
+
+    	$user->products()->detach($request->product_id);
+
+
+        return redirect('/shopping-list')->with('message', 'Product Removed from List');
     }
 
     

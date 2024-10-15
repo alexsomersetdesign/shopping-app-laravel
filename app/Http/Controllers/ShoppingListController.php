@@ -21,7 +21,30 @@ class ShoppingListController extends BaseController
     	//Get user products
     	$userProducts = $user->products()->get();
 
-        return view('/shopping-list', compact('allProducts', 'user', 'userProducts'));
+        //Get shopping list total price
+        $list_total_price = $userProducts->sum('price');
+
+        //Get user spending limit
+        if($list_total_price >= $user->spending_limit) {
+            $display_message = true;
+        } else {
+            $display_message = false;
+        }
+
+
+        return view('/shopping-list', compact('allProducts', 'user', 'userProducts', 'list_total_price', 'display_message'));
+    }
+
+    public function setSpendingLimit(Request $request) {
+
+    	//Get the user 
+    	$user = $request->user();
+
+    	$user->spending_limit = $request->spending_limit;
+
+    	$user->save();
+
+    	return redirect('/shopping-list')->with('message', 'Spending Limit Updated');
     }
 
     

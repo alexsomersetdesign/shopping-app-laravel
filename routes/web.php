@@ -18,5 +18,12 @@ Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@registerU
 //Shopping list Route for authorized user
 Route::get('/shopping-list', 'App\Http\Controllers\ShoppingListController@showShoppingList');
 
-//Product Add
+//Product Add/Delete
 Route::post('/product-add', 'App\Http\Controllers\ProductController@addProductToList');
+Route::post('/product-remove', 'App\Http\Controllers\ProductController@removeProductFromList');
+
+//Set spending limit
+Route::post('/set-spending-limit', 'App\Http\Controllers\ShoppingListController@setSpendingLimit');
+
+//Send Email
+Route::post('/send-email', 'App\Http\Controllers\ShoppingListMailController@sendShoppingListEmail');

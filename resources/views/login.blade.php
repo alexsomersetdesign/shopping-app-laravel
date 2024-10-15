@@ -21,7 +21,7 @@
 								<input id="password" name="password" type="password" placeholder="Password"/>
 							</label>
 							<button class="btn" type="submit">Login</button>
-							<a class="pl-5"  href="/register">Register</a>
+							<a class="pl-5 underline"  href="/register">Register</a>
 						</form>
 
 					</div>
