@@ -38,7 +38,7 @@ Incomplete Stories (not enough time left)
 - npm install
 - cp .env.example .env
 
-Please now add credentials to .env and then run the following commands
+Please now add credentials to .env for database and mail and then run the following commands
 
 - php artisan key:generate
 - php artisan config:clear
