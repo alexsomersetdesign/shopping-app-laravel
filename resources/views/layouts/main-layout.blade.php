@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Shopping List Application</title>
-	@vite(['resources/css/app.css', 'resources/css/tailwind-output.css', 'resources/js/app.js'])
+	@vite(['resources/css/app.css', 'resources/css/tailwind-output.css', 'resources/js/scripts.js', 'resources/js/app.js'])
 </head>
 <body>
 	<main class="main">
