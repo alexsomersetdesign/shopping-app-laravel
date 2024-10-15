@@ -13,6 +13,5 @@
 
 		@include('components.footer')
 	</main>
-	@stack('scripts')
 </body>
 </html>

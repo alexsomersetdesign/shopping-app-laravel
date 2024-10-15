@@ -64,19 +64,22 @@ function getStoredListItems() {
             product_array.forEach(item => {
 
                 const product = document.querySelector(`[data-product-id='${item}']`);
-                product.classList.add('added');
 
-            	//Add class and styles to indicate to user, it has been added
-            	product.classList.add('added');
-            	const btn = product.querySelector('.btn--purchase');
-    			const product_name = product.querySelector('.left SPAN');
+                if(product) {
+	                product.classList.add('added');
+
+	            	//Add class and styles to indicate to user, it has been added
+	            	product.classList.add('added');
+	            	const btn = product.querySelector('.btn--purchase');
+	    			const product_name = product.querySelector('.left SPAN');
 
 
-    			product_name.classList.add('crossed-off');
-    			btn.textContent = 'Crossed Off';
+	    			product_name.classList.add('crossed-off');
+	    			btn.textContent = 'Crossed Off';
 
-    			//Add a new class which will serve as a selector to remove the product from stored array on toggle
-    			btn.classList.add('btn--return');
+	    			//Add a new class which will serve as a selector to remove the product from stored array on toggle
+	    			btn.classList.add('btn--return');
+	    		}
 
     			const return_selectors = document.querySelectorAll('.btn--return');
     			if(return_selectors) {
